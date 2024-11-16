@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Charter BT';
+    src: url('fonts/Charter-BT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Charter BT';
+    src: url('fonts/Charter-Bold-BT.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Charter BT', serif;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
