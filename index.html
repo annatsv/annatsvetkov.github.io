@@ -71,10 +71,17 @@ p {
     text-decoration: none;
 }
 
-.navbar a:visited {
-    color: blue !important; /* Ensures visited links stay blue */
+/* Ensure links remain blue */
+a {
+    color: blue;
+    text-decoration: none; /* Remove underline */
 }
 
+a:visited {
+    color: blue !important; /* Ensure visited links stay blue */
+}
+
+/* Icon styling */
 .toggle-icon {
     cursor: pointer;
     width: 24px;
@@ -110,7 +117,7 @@ p {
 }
 
 .dark-mode a:visited {
-    color: lightblue !important; /* Ensures visited links stay light blue in dark mode */
+    color: lightblue !important; /* Ensure visited links stay light blue in dark mode */
 }
 </style>
 </head>
@@ -118,7 +125,6 @@ p {
 <!-- Navigation Bar -->
 <div class="navbar">
     <a href="/">about</a>
-    <a href="/research">research</a>
     <div class="toggle-icon" onclick="toggleDarkMode()"></div>
 </div>
 
@@ -135,17 +141,6 @@ p {
         My research focuses on developing a human-centered approach to AI that integrates philosophical inquiry about the mind with cutting-edge computational methods.
     </p>
 </div>
-
-
-a {
-    color: blue;
-    text-decoration: none; /* Remove underline */
-}
-
-a:visited {
-    color: blue; /* Ensure visited links remain blue */
-}
-
 
 <!-- Dark Mode Toggle Script -->
 <script>
