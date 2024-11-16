@@ -67,11 +67,12 @@ p {
 }
 
 .navbar a:hover {
-    text-decoration: underline;
+    /* No underline on hover */
+    text-decoration: none;
 }
 
 .navbar a:visited {
-    color: blue; /* Prevent visited links from turning purple */
+    color: blue !important; /* Ensures visited links stay blue */
 }
 
 .toggle-icon {
@@ -113,7 +114,7 @@ p {
 }
 
 .dark-mode a:visited {
-    color: lightblue; /* Prevent visited links from turning purple */
+    color: lightblue !important; /* Ensures visited links stay light blue in dark mode */
 }
 </style>
 </head>
