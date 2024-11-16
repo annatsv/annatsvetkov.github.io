@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anna Tsvetkov</title>
 
     <!-- Inline CSS -->
     <style>
+        /* Load the fonts */
         @font-face {
             font-family: 'Charter BT';
             src: url('fonts/Charter-BT.ttf') format('truetype');
@@ -21,16 +21,20 @@
             font-style: normal;
         }
 
+        /* General body styling */
         body {
             font-family: 'Charter BT', serif;
             line-height: 1.6;
             margin: 20px;
         }
 
+        /* Styling for headings to use the bold font */
         h1, h2, h3 {
+            font-family: 'Charter BT', serif;
             font-weight: bold;
         }
 
+        /* Container layout */
         .container {
             display: flex;
             justify-content: space-between;
@@ -45,13 +49,29 @@
             max-width: 100%;
             border-radius: 10px;
         }
+
+        /* Blue links without underline */
+        a {
+            color: blue;
+            text-decoration: none; /* Remove underline by default */
+        }
+
+        /* Add underline on hover */
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="left">
             <h1>Anna Tsvetkov</h1>
-            <p>I’m a Philosophy PhD and Computer Science Sc.M student at Brown. I am also an AI researcher at MIT FutureTech Lab.</p>
+            <p>
+                I’m a Philosophy PhD and Computer Science ScM student at 
+                <a href="https://philosophy.brown.edu/">Brown</a>. 
+                I am also an AI researcher at 
+                <a href="https://futuretech.mit.edu/">MIT FutureTech Lab</a>.
+            </p>
         </div>
         <div class="right">
             <img src="your-photo.jpg" alt="Anna Tsvetkov">
