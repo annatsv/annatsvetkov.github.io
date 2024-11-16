@@ -49,10 +49,12 @@ p {
 /* Top navigation bar */
 .navbar {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
+    max-width: 800px; /* Match text content width */
+    margin: 0 auto; /* Center navbar with page */
 }
 
 .navbar a {
@@ -61,6 +63,7 @@ p {
     text-decoration: none; /* Remove underline */
     margin-right: 15px;
     font-size: 1.1rem;
+    text-transform: lowercase;
 }
 
 .navbar a:hover {
@@ -76,30 +79,20 @@ p {
     width: 24px;
     height: 24px;
     display: inline-block;
-    background-color: #000; /* Black by default */
-    border-radius: 50%;
-    margin-left: 20px;
-    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s;
 }
 
-.toggle-icon:before,
-.toggle-icon:after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    transition: background-color 0.3s;
+/* Light mode icon */
+.toggle-icon.light-mode {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e4/Sun_icon.svg');
 }
 
-.toggle-icon:before {
-    top: 6px;
-    left: 6px;
-    width: 12px;
-    height: 12px;
-    background-color: white; /* Sun for light mode */
-}
-
-.dark-mode .toggle-icon:before {
-    background-color: black; /* Moon for dark mode */
+/* Dark mode icon */
+.toggle-icon.dark-mode {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3b/Moon_icon.svg');
 }
 
 /* Centered layout with margins */
@@ -127,9 +120,9 @@ p {
 <body>
 <!-- Navigation Bar -->
 <div class="navbar">
-    <a href="/" style="text-transform: lowercase;">about</a>
-    <a href="/research" style="text-transform: lowercase;">research</a>
-    <div class="toggle-icon" onclick="toggleDarkMode()"></div>
+    <a href="/">about</a>
+    <a href="/research">research</a>
+    <div class="toggle-icon light-mode" onclick="toggleDarkMode()"></div>
 </div>
 
 <!-- Main Content -->
@@ -150,7 +143,17 @@ p {
 <script>
 function toggleDarkMode() {
     const body = document.body;
+    const icon = document.querySelector('.toggle-icon');
     body.classList.toggle('dark-mode');
+
+    // Update the toggle icon appearance
+    if (body.classList.contains('dark-mode')) {
+        icon.classList.remove('light-mode');
+        icon.classList.add('dark-mode');
+    } else {
+        icon.classList.remove('dark-mode');
+        icon.classList.add('light-mode');
+    }
 }
 </script>
 </body>
