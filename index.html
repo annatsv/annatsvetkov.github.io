@@ -107,12 +107,20 @@ a:visited {
     color: #ffffff; /* White for all black text */
 }
 
-.dark-mode a {
-    color: lightblue; /* Lighter blue for links in dark mode */
+.dark-mode a,
+.dark-mode .publication-title,
+.dark-mode .linked-publication {
+    color: lightblue; /* Consistent lighter blue for all links and blue text */
 }
 
 .dark-mode a:visited {
     color: lightblue !important; /* Ensure visited links stay light blue */
+}
+
+.dark-mode a:hover,
+.dark-mode .publication-title:hover,
+.dark-mode .linked-publication:hover {
+    text-decoration: underline; /* Underline on hover in dark mode */
 }
 
 .dark-mode .bold-title {
