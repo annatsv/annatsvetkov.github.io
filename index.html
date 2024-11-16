@@ -87,10 +87,46 @@ hr {
     text-decoration: underline; /* Underline on hover */
 }
 
-.regular-text {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    margin-bottom: 1.5rem;
+/* Ensure links underline on hover */
+a {
+    color: blue;
+    text-decoration: none; /* Remove underline initially */
+}
+
+a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+a:visited {
+    color: blue !important; /* Ensure visited links stay blue */
+}
+
+/* Allow specific text to stretch past the margins */
+.stretch-text {
+    display: inline-block;
+    margin-right: -20px; /* Extend slightly past the right margin */
+}
+
+/* Night Mode Adjustments */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff; /* White for all black text */
+}
+
+.dark-mode a {
+    color: lightblue; /* Lighter blue for links in dark mode */
+}
+
+.dark-mode a:visited {
+    color: lightblue !important; /* Ensure visited links stay light blue */
+}
+
+.dark-mode .bold-title {
+    color: #ffffff; /* White for bold black titles */
+}
+
+.dark-mode hr {
+    border-top: 0.5px solid #ffffff; /* White lines in dark mode */
 }
 
 /* Top navigation bar */
@@ -117,55 +153,6 @@ hr {
     /* No underline on hover */
     text-decoration: none;
 }
-
-/* Ensure links remain blue */
-a {
-    color: blue;
-    text-decoration: none; /* Remove underline */
-}
-
-a:visited {
-    color: blue !important; /* Ensure visited links stay blue */
-}
-
-/* Icon styling */
-.toggle-icon {
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: background-image 0.3s;
-    background-image: url('icons/darkmode.svg'); /* Default: Moon icon for light mode */
-}
-
-/* Dark mode icon */
-.dark-mode .toggle-icon {
-    background-image: url('icons/lightmode.svg'); /* Sun icon for dark mode */
-}
-
-/* Centered layout with margins */
-.container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-/* Dark mode styles */
-.dark-mode {
-    background-color: #121212;
-    color: #f8f9fa;
-}
-
-.dark-mode a {
-    color: lightblue;
-}
-
-.dark-mode a:visited {
-    color: lightblue !important; /* Ensure visited links stay light blue in dark mode */
-}
 </style>
 </head>
 <body>
@@ -183,12 +170,6 @@ a:visited {
         <a href="https://philosophy.brown.edu/">Brown</a>.
         I am also an AI researcher at
         <a href="https://futuretech.mit.edu/">MIT FutureTech Lab</a>.
-    </p>
-    <p>
-        My research focuses on developing a human-centered approach to AI that integrates philosophical inquiry about the mind 
-        with cutting-edge methods in computer science. The aspiration of my work is to use philosophy to guide carefully designed
-        experiments on AI that deepen our understanding of the mind and, in turn, to use insights about the mind 
-        to build interpretable and ethical AI.
     </p>
     <p>
         Here is my <a href="https://annatsv.github.io/files/Tsvetkov-CV.pdf" target="_blank">CV</a>.
@@ -209,7 +190,7 @@ a:visited {
         <a href="https://annatsv.github.io/files/More%20frequent,%20shorter%20trials%20enhance%20acquisition%20in%20a%20training%20session-%20There%20is%20a%20free%20lunch!.pdf" target="_blank" class="linked-publication">
             More frequent, shorter trials enhance acquisition in a training session: There is a free lunch!
         </a> Murphy, R. A., Witnauer, J. E., Castiello, S., Tsvetkov, A., Li, A., Alcaide, D. M., & Miller, R. R. 
-        Journal of Experimental Psychology: General (2022)
+        <span class="stretch-text">Journal of Experimental Psychology: General (2022)</span>
     </p>
 
     <p class="bold-title">AI as a Tool for Philosophical Progress</p>
