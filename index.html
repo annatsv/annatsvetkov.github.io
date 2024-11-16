@@ -84,16 +84,12 @@ p {
     background-position: center;
     background-repeat: no-repeat;
     transition: background-image 0.3s;
-}
-
-/* Light mode icon */
-.toggle-icon.light-mode {
-    background-image: url('icons/lightmode.svg');
+    background-image: url('icons/darkmode.svg'); /* Default: Moon icon for light mode */
 }
 
 /* Dark mode icon */
-.toggle-icon.dark-mode {
-    background-image: url('icons/darkmode.svg');
+.dark-mode .toggle-icon {
+    background-image: url('icons/lightmode.svg'); /* Sun icon for dark mode */
 }
 
 /* Centered layout with margins */
@@ -123,7 +119,7 @@ p {
 <div class="navbar">
     <a href="/">about</a>
     <a href="/research">research</a>
-    <div class="toggle-icon light-mode" onclick="toggleDarkMode()"></div>
+    <div class="toggle-icon" onclick="toggleDarkMode()"></div>
 </div>
 
 <!-- Main Content -->
@@ -144,17 +140,7 @@ p {
 <script>
 function toggleDarkMode() {
     const body = document.body;
-    const icon = document.querySelector('.toggle-icon');
     body.classList.toggle('dark-mode');
-
-    // Update the toggle icon appearance
-    if (body.classList.contains('dark-mode')) {
-        icon.classList.remove('light-mode');
-        icon.classList.add('dark-mode');
-    } else {
-        icon.classList.remove('dark-mode');
-        icon.classList.add('light-mode');
-    }
 }
 </script>
 </body>
