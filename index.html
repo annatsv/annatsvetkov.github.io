@@ -88,7 +88,6 @@ hr {
     text-decoration: underline; /* Underline on hover */
 }
 
-/* Ensure all links underline on hover */
 a {
     color: blue;
     text-decoration: none; /* Remove underline initially */
@@ -190,6 +189,19 @@ a:visited {
     margin: 40px auto;
     padding: 0 20px;
 }
+
+/* Floated image */
+.img-container {
+    float: right;
+    width: 40%; /* Adjust width as needed */
+    margin-left: 20px; /* Spacing between text and image */
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
 </style>
 </head>
 <body>
@@ -202,24 +214,26 @@ a:visited {
 <!-- Main Content -->
 <div class="container">
     <h1>Anna Tsvetkov</h1>
-    <p>
-        I’m a Philosophy PhD and Computer Science ScM student at
-        <a href="https://philosophy.brown.edu/">Brown</a>.
-        I'm also an AI researcher at
-        <a href="https://futuretech.mit.edu/">MIT FutureTech Lab</a>.
-    </p>
-    <p>
-        My research focuses on developing a human-centered approach to AI that integrates philosophical inquiry about the mind 
-        with cutting-edge methods in computer science. The aspiration of my work is to use philosophy to guide carefully designed
-        experiments on AI that deepen our understanding of the mind and, in turn, to use insights about the mind 
-        to build interpretable and ethical AI.
-    </p>
-    <p>
-        Here is my <a href="https://annatsv.github.io/files/Tsvetkov-CV.pdf" target="_blank">CV</a>.
-    </p>
-    <p>
-        Email: anna_tsvetkov [at] brown [dot] edu
-    </p>
+    <div class="clearfix">
+        <img src="files/IMG_8115.jpeg" alt="Portrait of Anna Tsvetkov" class="img-container">
+        <p>
+            I’m a Philosophy PhD and Computer Science ScM student at
+            <a href="https://philosophy.brown.edu/">Brown</a>. I am also an AI researcher at
+            <a href="https://futuretech.mit.edu/">MIT FutureTech Lab</a>.
+        </p>
+        <p>
+            My research focuses on developing a human-centered approach to AI that integrates philosophical inquiry about the mind 
+            with cutting-edge methods in computer science. The aspiration of my work is to use philosophy to guide carefully designed
+            experiments on AI that deepen our understanding of the mind and, in turn, to use insights about the mind 
+            to build interpretable and ethical AI.
+        </p>
+        <p>
+            Here is my <a href="https://annatsv.github.io/files/Tsvetkov-CV.pdf" target="_blank">CV</a>.
+        </p>
+        <p>
+            Email: anna_tsvetkov [at] brown [dot] edu
+        </p>
+    </div>
 
     <!-- Publications Section -->
     <h2>Publications & Works in Progress</h2>
