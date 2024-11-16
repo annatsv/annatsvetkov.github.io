@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna Tsvetkov</title>
 
     <!-- Inline CSS -->
     <style>
@@ -24,58 +25,108 @@
         /* General body styling */
         body {
             font-family: 'Charter BT', serif;
-            line-height: 1.6;
-            margin: 20px;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        /* Styling for headings to use the bold font */
-        h1, h2, h3 {
+        /* Font size adjustments */
+        h1 {
             font-family: 'Charter BT', serif;
             font-weight: bold;
+            font-size: 2.5rem; /* Larger size for your name */
+            margin-bottom: 0.5em;
         }
 
-        /* Container layout */
-        .container {
+        p {
+            font-size: 1.1rem; /* Slightly larger text size */
+        }
+
+        /* Top navigation bar */
+        .navbar {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: #f8f9fa;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
         }
 
-        .left {
-            width: 65%;
-        }
-
-        .right img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-
-        /* Blue links without underline */
-        a {
+        .navbar a {
             color: blue;
-            text-decoration: none; /* Remove underline by default */
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 1rem;
         }
 
-        /* Add underline on hover */
-        a:hover {
+        .navbar a:hover {
             text-decoration: underline;
+        }
+
+        .toggle-icon {
+            cursor: pointer;
+            font-size: 1.5rem;
+            margin-right: 20px;
+        }
+
+        /* Centered layout with margins */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Dark mode styles */
+        .dark-mode {
+            background-color: #121212;
+            color: #f8f9fa;
+        }
+
+        .dark-mode .navbar {
+            background-color: #1e1e1e;
+            border-bottom: 1px solid #333;
+        }
+
+        .dark-mode a {
+            color: lightblue;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="left">
-            <h1>Anna Tsvetkov</h1>
-            <p>
-                I’m a Philosophy PhD and Computer Science ScM student at 
-                <a href="https://philosophy.brown.edu/">Brown</a>. 
-                I am also an AI researcher at 
-                <a href="https://futuretech.mit.edu/">MIT FutureTech Lab</a>.
-            </p>
-        </div>
-        <div class="right">
-            <img src="your-photo.jpg" alt="Anna Tsvetkov">
-        </div>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="/">About</a>
+        <span class="toggle-icon" onclick="toggleDarkMode()">☀️</span>
     </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Anna Tsvetkov</h1>
+        <p>
+            I’m a Philosophy PhD and Computer Science Sc.M student at 
+            <a href="https://philosophy.brown.edu/">Brown</a>. 
+            I am also an AI researcher at 
+            <a href="https://futuretech.mit.edu/">MIT FutureTech Lab</a>.
+        </p>
+        <p>
+            My research focuses on developing a human-centered approach to AI that integrates philosophical inquiry about the mind with cutting-edge computer science methods.
+        </p>
+    </div>
+
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            const icon = document.querySelector('.toggle-icon');
+            body.classList.toggle('dark-mode');
+            // Update the toggle icon based on the current mode
+            if (body.classList.contains('dark-mode')) {
+                icon.textContent = '🌙'; // Moon icon for dark mode
+            } else {
+                icon.textContent = '☀️'; // Sun icon for light mode
+            }
+        }
+    </script>
 </body>
 </html>
