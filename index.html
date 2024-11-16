@@ -87,20 +87,6 @@ hr {
     text-decoration: underline; /* Underline on hover */
 }
 
-/* Ensure links underline on hover */
-a {
-    color: blue;
-    text-decoration: none; /* Remove underline initially */
-}
-
-a:hover {
-    text-decoration: underline; /* Add underline on hover */
-}
-
-a:visited {
-    color: blue !important; /* Ensure visited links stay blue */
-}
-
 /* Allow specific text to stretch past the margins */
 .stretch-text {
     display: inline-block;
@@ -153,6 +139,41 @@ a:visited {
     /* No underline on hover */
     text-decoration: none;
 }
+
+/* Ensure links remain blue */
+a {
+    color: blue;
+    text-decoration: none; /* Remove underline */
+}
+
+a:visited {
+    color: blue !important; /* Ensure visited links stay blue */
+}
+
+/* Icon styling */
+.toggle-icon {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s;
+    background-image: url('icons/darkmode.svg'); /* Default: Moon icon for light mode */
+}
+
+/* Dark mode icon */
+.dark-mode .toggle-icon {
+    background-image: url('icons/lightmode.svg'); /* Sun icon for dark mode */
+}
+
+/* Centered layout with margins */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 </style>
 </head>
 <body>
@@ -170,6 +191,12 @@ a:visited {
         <a href="https://philosophy.brown.edu/">Brown</a>.
         I am also an AI researcher at
         <a href="https://futuretech.mit.edu/">MIT FutureTech Lab</a>.
+    </p>
+    <p>
+        My research focuses on developing a human-centered approach to AI that integrates philosophical inquiry about the mind 
+        with cutting-edge methods in computer science. The aspiration of my work is to use philosophy to guide carefully designed
+        experiments on AI that deepen our understanding of the mind and, in turn, to use insights about the mind 
+        to build interpretable and ethical AI.
     </p>
     <p>
         Here is my <a href="https://annatsv.github.io/files/Tsvetkov-CV.pdf" target="_blank">CV</a>.
