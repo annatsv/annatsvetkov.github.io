@@ -76,7 +76,7 @@ hr {
 }
 
 .publication-title:hover {
-    text-decoration: none; /* Prevent hover underline for most titles */
+    text-decoration: none; /* Prevent hover underline for unlinked titles */
 }
 
 .linked-publication {
@@ -115,9 +115,12 @@ a:visited {
 }
 
 .dark-mode a,
-.dark-mode .publication-title,
 .dark-mode .linked-publication {
-    color: lightblue; /* Consistent lighter blue for all links and blue text */
+    color: lightblue; /* Consistent lighter blue for all links */
+}
+
+.dark-mode .publication-title {
+    color: lightblue; /* Unlinked blue titles also light blue */
 }
 
 .dark-mode a:visited {
@@ -125,9 +128,12 @@ a:visited {
 }
 
 .dark-mode a:hover,
-.dark-mode .publication-title:hover,
 .dark-mode .linked-publication:hover {
-    text-decoration: underline; /* Underline on hover in dark mode */
+    text-decoration: underline; /* Underline only for links in dark mode */
+}
+
+.dark-mode .publication-title:hover {
+    text-decoration: none; /* Prevent hover underline for unlinked titles */
 }
 
 .dark-mode .bold-title {
@@ -159,8 +165,7 @@ a:visited {
 }
 
 .navbar a:hover {
-    /* No underline on hover */
-    text-decoration: none;
+    text-decoration: underline; /* Add underline on hover */
 }
 
 .toggle-icon {
