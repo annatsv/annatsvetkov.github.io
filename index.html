@@ -55,7 +55,7 @@ h2 {
 
 hr {
     border: 0;
-    border-top: 1px solid #000; /* Black line */
+    border-top: 2px solid #000; /* Thicker, bold line */
     width: 100%; /* Width within content margin */
     max-width: 800px; /* Align with text margins */
     margin: 0 auto 1.5rem auto; /* Center and add spacing */
@@ -63,15 +63,28 @@ hr {
 
 .bold-title {
     font-weight: bold;
-    color: blue;
     font-size: 1.1rem;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
-    text-decoration: none;
+    color: #000; /* Black */
 }
 
-.bold-title:hover {
-    text-decoration: underline;
+.publication-title {
+    color: blue;
+    text-decoration: none; /* No underline */
+}
+
+.publication-title:hover {
+    text-decoration: none; /* Prevent hover underline for most titles */
+}
+
+.linked-publication {
+    color: blue;
+    text-decoration: none; /* No underline initially */
+}
+
+.linked-publication:hover {
+    text-decoration: underline; /* Underline on hover */
 }
 
 .regular-text {
@@ -86,7 +99,7 @@ hr {
     justify-content: flex-end;
     align-items: center;
     padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 2px solid #000; /* Match Publications line thickness */
     max-width: 800px; /* Match text content width */
     margin: 0 auto; /* Center navbar with page */
 }
@@ -189,33 +202,24 @@ a:visited {
     <hr>
     <p>My work involves three strands at the core of a human-centered approach to AI:</p>
     
-    <!-- Strand 1 -->
-    <p class="bold-title">1. Understanding Artificial and Natural Minds</p>
+    <p class="bold-title">Understanding Artificial and Natural Minds</p>
     <p class="regular-text">
-        Tsvetkov, A. & Pavlick, E. (2024). “Can Large Language Models Represent Perceptual Reality?”<br>
-        Tsvetkov, A. (2024). “Troubles with Spatial Functionalism”<br>
-        In Progress
+        <span class="publication-title">Can Large Language Models Represent Perceptual Reality?</span> Tsvetkov, A. & Pavlick, E. (2024). (Under Review.)<br>
+        <span class="publication-title">Troubles with Spatial Functionalism</span> Tsvetkov, A. (2024). (Under Review.)
     </p>
 
-    <!-- Strand 2 -->
-    <p class="bold-title">2. AI as a Tool for Philosophical Progress</p>
+    <p class="bold-title">AI as a Tool for Philosophical Progress</p>
     <p class="regular-text">
-        <a href="https://annatsv.github.io/files/More%20frequent,%20shorter%20trials%20enhance%20acquisition%20in%20a%20training%20session-%20There%20is%20a%20free%20lunch!.pdf" target="_blank">
-            Murphy, R. A., Witnauer, J. E., Castiello, S., Tsvetkov, A., Li, A., Alcaide, D. M., & Miller, R. R.
-            (2022). “More frequent, shorter trials enhance acquisition in a training session: There is a free
-            lunch!” Journal of Experimental Psychology: General
+        <a href="https://annatsv.github.io/files/More%20frequent,%20shorter%20trials%20enhance%20acquisition%20in%20a%20training%20session-%20There%20is%20a%20free%20lunch!.pdf" target="_blank" class="linked-publication">
+            More frequent, shorter trials enhance acquisition in a training session: There is a free lunch!
         </a><br><br>
-        Tsvetkov, A. “Molyneux’s Question and Multimodal Models” (In progress.)
+        <span class="publication-title">Molyneux’s Question and Multimodal Models</span> Tsvetkov, A. (In progress.)
     </p>
 
-    <!-- Strand 3 -->
-    <p class="bold-title">3. The Ethics of AI</p>
+    <p class="bold-title">The Ethics of AI</p>
     <p class="regular-text">
-        Tsvetkov, A., Trisovic, A., Thompson, N. “A Large-Scale Analysis of Ethical Considerations in AI
-        Foundation Models” (In progress with MIT FutureTech Lab.)<br><br>
-        Trisovic, A., Tsvetkov, A., Fogelson, A., Siva, J., Lin, S., Siminiuc, D., Vellon, R.C., Zhou, D., Yuan, G.,
-        Thompson, N. “Scientific Use of Foundation Models and Democratization of AI" (In progress with
-        MIT FutureTech Lab.)
+        <span class="publication-title">A Large-Scale Analysis of Ethical Considerations in AI Foundation Models</span> Tsvetkov, A., Trisovic, A., Thompson, N. (In progress with MIT FutureTech Lab.)<br><br>
+        <span class="publication-title">Scientific Use of Foundation Models and Democratization of AI</span> Trisovic, A., Tsvetkov, A., Fogelson, A., Siva, J., Lin, S., Siminiuc, D., Vellon, R.C., Zhou, D., Yuan, G., Thompson, N. (In progress with MIT FutureTech Lab.)
     </p>
 </div>
 
