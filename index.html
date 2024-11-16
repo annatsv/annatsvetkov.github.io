@@ -1,147 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anna Tsvetkov</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anna Tsvetkov</title>
 
-    <!-- Inline CSS -->
-    <style>
-        /* Load the fonts */
-        @font-face {
-            font-family: 'Charter BT';
-            src: url('fonts/Charter-BT.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
+<!-- Inline CSS -->
+<style>
+/* Load the fonts */
+@font-face {
+    font-family: 'Charter BT';
+    src: url('fonts/Charter-BT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
-        @font-face {
-            font-family: 'Charter BT';
-            src: url('fonts/Charter-Bold-BT.ttf') format('truetype');
-            font-weight: bold;
-            font-style: normal;
-        }
+@font-face {
+    font-family: 'Charter BT';
+    src: url('fonts/Charter-Bold-BT.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 
-        /* General body styling */
-        body {
-            font-family: 'Charter BT', serif;
-            line-height: 1.8;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-            color: #000000;
-            transition: background-color 0.3s, color 0.3s;
-        }
+/* General body styling */
+body {
+    font-family: 'Charter BT', serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
 
-        /* Font size adjustments */
-        h1 {
-            font-family: 'Charter BT', serif;
-            font-weight: bold;
-            font-size: 2.5rem; /* Larger size for your name */
-            margin-bottom: 0.5em;
-        }
+/* Font size adjustments */
+h1 {
+    font-family: 'Charter BT', serif;
+    font-weight: bold;
+    font-size: 2.5rem; /* Larger size for your name */
+    margin-bottom: 0.5em;
+}
 
-        p {
-            font-size: 1.1rem; /* Slightly larger text size */
-        }
+p {
+    font-size: 1.1rem; /* Slightly larger text size */
+    line-height: 1.6; /* Adjust spacing */
+}
 
-        /* Top navigation bar */
-        .navbar {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ddd;
-        }
+/* Top navigation bar */
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
 
-        .navbar a {
-            font-family: 'Charter BT', serif;
-            color: blue;
-            text-decoration: none;
-            margin-right: 15px;
-            font-size: 1.1rem;
-        }
+.navbar a {
+    font-family: 'Charter BT', serif;
+    color: blue;
+    text-decoration: none; /* Remove underline */
+    margin-right: 15px;
+    font-size: 1.1rem;
+}
 
-        .navbar a:hover {
-            text-decoration: underline;
-        }
+.navbar a:hover {
+    text-decoration: underline;
+}
 
-        .navbar a:visited {
-            color: blue; /* Prevent visited links from turning purple */
-        }
+.navbar a:visited {
+    color: blue; /* Prevent visited links from turning purple */
+}
 
-        .toggle-icon {
-            cursor: pointer;
-            width: 24px;
-            height: 24px;
-            display: inline-block;
-            background-color: #000; /* Black by default */
-            border-radius: 50%;
-            margin-right: 20px;
-            transition: background-color 0.3s;
-        }
+.toggle-icon {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-color: #000; /* Black by default */
+    border-radius: 50%;
+    margin-left: 20px;
+    position: relative;
+}
 
-        .dark-mode .toggle-icon {
-            background-color: #fff; /* White for dark mode */
-        }
+.toggle-icon:before,
+.toggle-icon:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
 
-        /* Centered layout with margins */
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+.toggle-icon:before {
+    top: 6px;
+    left: 6px;
+    width: 12px;
+    height: 12px;
+    background-color: white; /* Sun for light mode */
+}
 
-        /* Dark mode styles */
-        .dark-mode {
-            background-color: #121212;
-            color: #f8f9fa;
-        }
+.dark-mode .toggle-icon:before {
+    background-color: black; /* Moon for dark mode */
+}
 
-        .dark-mode a {
-            color: lightblue;
-        }
+/* Centered layout with margins */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
-        .dark-mode a:visited {
-            color: lightblue; /* Prevent visited links from turning purple */
-        }
-    </style>
+/* Dark mode styles */
+.dark-mode {
+    background-color: #121212;
+    color: #f8f9fa;
+}
+
+.dark-mode a {
+    color: lightblue;
+}
+
+.dark-mode a:visited {
+    color: lightblue; /* Prevent visited links from turning purple */
+}
+</style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <div class="navbar">
-        <a href="/">About</a>
-        <div class="toggle-icon" onclick="toggleDarkMode()"></div>
-    </div>
+<!-- Navigation Bar -->
+<div class="navbar">
+    <a href="/" style="text-transform: lowercase;">about</a>
+    <a href="/research" style="text-transform: lowercase;">research</a>
+    <div class="toggle-icon" onclick="toggleDarkMode()"></div>
+</div>
 
-    <!-- Main Content -->
-    <div class="container">
-        <h1>Anna Tsvetkov</h1>
-        <p>
-            I’m a Philosophy PhD and Computer Science Sc.M student at 
-            <a href="https://philosophy.brown.edu/">Brown</a>. 
-            I am also an AI researcher at 
-            <a href="https://futuretech.mit.edu/">MIT FutureTech Lab</a>.
-        </p>
-        <p>
-            My research focuses on developing a human-centered approach to AI that integrates philosophical inquiry about the mind with cutting-edge computer science methods.
-        </p>
-    </div>
+<!-- Main Content -->
+<div class="container">
+    <h1>Anna Tsvetkov</h1>
+    <p>
+        I’m a Philosophy PhD and Computer Science ScM student at
+        <a href="https://philosophy.brown.edu/">Brown</a>.
+        I am also an AI researcher at
+        <a href="https://futuretech.mit.edu/">MIT FutureTech Lab</a>.
+    </p>
+    <p>
+        My research focuses on developing a human-centered approach to AI that integrates philosophical inquiry about the mind with cutting-edge computational methods.
+    </p>
+</div>
 
-    <!-- Dark Mode Toggle Script -->
-    <script>
-        function toggleDarkMode() {
-            const body = document.body;
-            const icon = document.querySelector('.toggle-icon');
-            body.classList.toggle('dark-mode');
-
-            // Update the toggle icon appearance
-            if (body.classList.contains('dark-mode')) {
-                icon.style.backgroundColor = '#fff'; // White for dark mode
-            } else {
-                icon.style.backgroundColor = '#000'; // Black for light mode
-            }
-        }
-    </script>
+<!-- Dark Mode Toggle Script -->
+<script>
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+}
+</script>
 </body>
 </html>
