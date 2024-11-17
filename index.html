@@ -40,16 +40,15 @@ body {
 /* Container for header with icon */
 .header-with-icon {
     position: relative; /* Enable positioning for the icon */
-    padding-left: 50px; /* Add space for the icon to avoid overlap */
 }
 
 /* Icon styles */
 .header-icon {
     position: absolute;
     top: 50%; /* Align the icon vertically with the text */
-    left: -40px; /* Place the icon in the left margin */
-    width: 24px;
-    height: 24px;
+    left: -50px; /* Place the icon further into the left margin */
+    width: 32px; /* Make the icon slightly bigger */
+    height: 32px;
     transform: translateY(-50%); /* Center the icon vertically */
 }
 
@@ -75,6 +74,12 @@ body {
 
 .ethics-icon {
     content: url('files/ethics_black.svg');
+}
+
+/* Adjust headers to align with text */
+.bold-title {
+    margin-left: 0; /* Ensure the headers align with the main text */
+    padding-left: 0; /* Remove any extra padding from the headers */
 }
 
 
