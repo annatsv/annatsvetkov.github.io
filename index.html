@@ -219,13 +219,15 @@ a:visited {
 <body>
 <!-- Navigation Bar -->
 <div class="navbar">
-    <a href="/">about</a>
+    <a href="#about">about</a>
+    <a href="#research">research</a>
     <div class="toggle-icon" onclick="toggleDarkMode()"></div>
 </div>
 
 <!-- Main Content -->
 <div class="container">
-    <h1>Anna Tsvetkov</h1>
+    <!-- About Section -->
+    <h1 id="about">Anna Tsvetkov</h1>
     <div class="clearfix">
         <img src="files/IMG_8125.jpeg" alt="Picture" class="img-container">
         <p>
@@ -249,9 +251,8 @@ a:visited {
         </p>
     </div>
 
-
     <!-- Publications Section -->
-    <h2>Publications & Works in Progress</h2>
+    <h2 id="research">Publications & Works in Progress</h2>
     <hr>
     <p>My work centers on three themes at the core of a human-centered approach to AI:</p>
     
@@ -275,6 +276,24 @@ a:visited {
         <span class="publication-title">Scientific Use of Foundation Models and Democratization of AI</span> Trisovic, A., Tsvetkov, A., Fogelson, A., Siva, J., Lin, S., Siminiuc, D., Vellon, R.C., Zhou, D., Yuan, G., Thompson, N. (In progress with MIT FutureTech Lab.)
     </p>
 </div>
+
+<!-- Smooth Scrolling Script -->
+<script>
+    // Smooth scrolling behavior for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    function toggleDarkMode() {
+        const body = document.body;
+        body.classList.toggle('dark-mode');
+    }
+</script>
 
 <!-- Dark Mode Toggle Script -->
 <script>
