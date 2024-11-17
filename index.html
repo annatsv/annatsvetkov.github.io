@@ -190,14 +190,28 @@ a:visited {
     padding: 0 20px;
 }
 
-/* Floated image */
+/* Floated image for desktop */
 .img-container {
     float: right;
-    width: 36.5%; /* Restore original width */
-    max-height: none; /* Remove height restriction */
-    object-fit: cover; /* Ensure proper scaling */
+    width: 36.5%; /* Desktop size */
     margin-left: 20px; /* Spacing between text and image */
+    object-fit: cover; /* Ensure proper scaling */
 }
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .img-container {
+        width: 60%; /* Larger image for mobile */
+        float: none; /* Remove float */
+        display: block; /* Center the image */
+        margin: 0 auto 20px; /* Add spacing below */
+    }
+
+    .clearfix {
+        text-align: center; /* Center text on mobile */
+    }
+}
+
 
 .clearfix::after {
     content: "";
