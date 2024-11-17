@@ -23,6 +23,10 @@
 }
 
 /* General body styling */
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling for all anchors */
+}
+
 body {
     font-family: 'Charter BT', serif;
     line-height: 1.8;
@@ -31,9 +35,7 @@ body {
     background-color: #ffffff;
     color: #000000;
     transition: background-color 0.3s, color 0.3s;
-    scroll-behavior: smooth; /* Enables smooth scrolling */
 }
-
 
 /* Font size adjustments */
 h1 {
@@ -281,15 +283,6 @@ a:visited {
 </div>
 
 <!-- Smooth Scrolling Script -->
-<script>
-    function toggleDarkMode() {
-        const body = document.body;
-        body.classList.toggle('dark-mode');
-    }
-</script>
-
-
-<!-- Dark Mode Toggle Script -->
 <script>
 function toggleDarkMode() {
     const body = document.body;
