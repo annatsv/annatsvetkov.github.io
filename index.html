@@ -40,17 +40,17 @@ body {
 /* Container for header with icon */
 .header-with-icon {
     position: relative; /* Enable positioning for the icon */
-    padding-left: 40px; /* Add space to accommodate the icon */
+    padding-left: 50px; /* Add space for the icon to avoid overlap */
 }
 
 /* Icon styles */
 .header-icon {
     position: absolute;
-    top: 0;
-    left: 0; /* Place icon in the left margin */
+    top: 50%; /* Align the icon vertically with the text */
+    left: -40px; /* Place the icon in the left margin */
     width: 24px;
     height: 24px;
-    display: block;
+    transform: translateY(-50%); /* Center the icon vertically */
 }
 
 .dark-mode .mind-icon {
@@ -310,6 +310,7 @@ a:visited {
 
 
 
+
     <p class="regular-text">
         <span class="publication-title">Can Large Language Models Represent Perceptual Reality?</span> Tsvetkov, A. & Pavlick, E. (2024). (Under Review.)<br>
         <span class="publication-title">Troubles with Spatial Functionalism</span> Tsvetkov, A. (2024). (Under Review.)<br>
@@ -324,6 +325,7 @@ a:visited {
 </div>
 
 
+
     <p class="regular-text">
         <span class="publication-title">Molyneux’s Question and Multimodal Models</span> Tsvetkov, A. (In progress.)
     </p>
@@ -332,6 +334,7 @@ a:visited {
     <span class="header-icon ethics-icon"></span>
     <p class="bold-title">The Ethics of AI</p>
 </div>
+
 
     <p class="regular-text">
         <span class="publication-title">A Large-Scale Analysis of Ethical Considerations in AI Foundation Models</span> Tsvetkov, A., Trisovic, A., Thompson, N. (In progress with MIT FutureTech Lab.)<br>
