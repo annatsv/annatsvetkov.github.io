@@ -37,13 +37,20 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Add styles for the icons next to the headers */
+/* Container for header with icon */
+.header-with-icon {
+    position: relative; /* Enable positioning for the icon */
+    padding-left: 40px; /* Add space to accommodate the icon */
+}
+
+/* Icon styles */
 .header-icon {
+    position: absolute;
+    top: 0;
+    left: 0; /* Place icon in the left margin */
     width: 24px;
     height: 24px;
-    margin-right: 8px;
-    display: inline-block;
-    vertical-align: middle;
+    display: block;
 }
 
 .dark-mode .mind-icon {
@@ -69,6 +76,7 @@ body {
 .ethics-icon {
     content: url('files/ethics_black.svg');
 }
+
 
 /* Font size adjustments */
 h1 {
@@ -294,9 +302,11 @@ a:visited {
     <hr>
     <p>My research centers on three themes at the core of a human-centered approach to AI:</p>
     
-    <p class="bold-title">
-    <span class="header-icon mind-icon"></span>Understanding Artificial and Natural Minds
-</p>
+<div class="header-with-icon">
+    <span class="header-icon tool-icon"></span>
+    <p class="bold-title">AI as a Tool for Philosophical Progress</p>
+</div>
+
 
 
     <p class="regular-text">
@@ -307,17 +317,20 @@ a:visited {
         </a> Murphy, R. A., Witnauer, J. E., Castiello, S., Tsvetkov, A., Li, A., Alcaide, D. M., & Miller, R. R. (2022) Journal of Experimental Psychology: General
     </p>
 
-    <p class="bold-title">
-    <span class="header-icon tool-icon"></span>AI as a Tool for Philosophical Progress
-</p>
+<div class="header-with-icon">
+    <span class="header-icon tool-icon"></span>
+    <p class="bold-title">AI as a Tool for Philosophical Progress</p>
+</div>
+
 
     <p class="regular-text">
         <span class="publication-title">Molyneux’s Question and Multimodal Models</span> Tsvetkov, A. (In progress.)
     </p>
 
-    <p class="bold-title">
-    <span class="header-icon ethics-icon"></span>The Ethics of AI
-</p>
+<div class="header-with-icon">
+    <span class="header-icon ethics-icon"></span>
+    <p class="bold-title">The Ethics of AI</p>
+</div>
 
     <p class="regular-text">
         <span class="publication-title">A Large-Scale Analysis of Ethical Considerations in AI Foundation Models</span> Tsvetkov, A., Trisovic, A., Thompson, N. (In progress with MIT FutureTech Lab.)<br>
