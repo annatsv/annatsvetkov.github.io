@@ -42,8 +42,8 @@ h1 {
 }
 
 p {
-    font-size: 1.1rem; /* Slightly larger text size */
-    line-height: 1.4; /* Adjust spacing */
+    font-size: 1.15rem; /* Slightly larger text size */
+    line-height: 1.5; /* Adjust spacing */
     margin-bottom: 1rem; /* Restore margin spacing */
 }
 
@@ -64,7 +64,7 @@ hr {
 
 .bold-title {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
     color: #000; /* Black */
@@ -217,10 +217,11 @@ a:visited {
 </style>
 </head>
 <body>
+    
 <!-- Navigation Bar -->
 <div class="navbar">
-    <a href="#about">about</a>
-    <a href="#research">research</a>
+    <a href="/">about</a> <!-- Links back to the main page -->
+    <a href="#research">research</a> <!-- Scrolls to the research section -->
     <div class="toggle-icon" onclick="toggleDarkMode()"></div>
 </div>
 
@@ -279,21 +280,12 @@ a:visited {
 
 <!-- Smooth Scrolling Script -->
 <script>
-    // Smooth scrolling behavior for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-
     function toggleDarkMode() {
         const body = document.body;
         body.classList.toggle('dark-mode');
     }
 </script>
+
 
 <!-- Dark Mode Toggle Script -->
 <script>
