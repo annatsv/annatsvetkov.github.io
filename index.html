@@ -46,6 +46,19 @@ body {
     margin-bottom: 2rem; /* Add more space below the specific sections in pubs */
 }
 
+<style>
+/* Custom styles for specific links */
+.link-no-style {
+    color: black; /* Black text */
+    text-decoration: none; /* No underline */
+    cursor: pointer; /* it still looks clickable */
+}
+
+.link-no-style:hover {
+    text-decoration: none; /* No underline on hover */
+    color: black; /* Keep text black on hover */
+}
+</style>
 
 /* Container for header with icon */
 .header-with-icon {
@@ -312,8 +325,8 @@ I'm also an AI researcher at <a href="https://futuretech.mit.edu/" target="_blan
         <p>
             Here is my <a href="https://annatsv.github.io/files/Tsvetkov-CV.pdf" target="_blank">CV</a>.
         </p>
-    <p>Email: <a href="mailto:anna_tsvetkov@brown.edu">anna_tsvetkov [at] brown.edu</a></p>
-    <p>Bluesky: <a href="https://bsky.app/profile/annatsv.bsky.social"> [at] annatsv</a></p>
+<p>Email: <a href="mailto:anna_tsvetkov@brown.edu" class="link-no-style">anna_tsvetkov [at] brown.edu</a></p>
+<p>Bluesky: <a href="https://bsky.app/profile/annatsv.bsky.social" class="link-no-style" target="_blank" rel="noopener noreferrer">[at] annatsv</a></p>
 </div>
 
     <!-- Publications Section -->
